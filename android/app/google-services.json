@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "917039863920",
+    "firebase_url": "https://study-informatika-6d21b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "study-informatika-6d21b",
+    "storage_bucket": "study-informatika-6d21b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917039863920:android:345c682bffc9dff0223cb5",
+        "android_client_info": {
+          "package_name": "com.example.quiz3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917039863920-2au52qh5ncn43jr7ekk5v5b8ke8tgtqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOdAfo26phtRBhpUD10L5PrqCVELItbX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917039863920-2au52qh5ncn43jr7ekk5v5b8ke8tgtqj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917039863920-0ipq9ni6v18f11e24qd9b7iv97c5ppu2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterApplication1.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
