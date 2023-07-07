@@ -1,5 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz3/courses/pages/flutter/animasi_dan_efek_visual.dart';
+import 'package:quiz3/courses/pages/flutter/dasar_dasar_flutter.dart';
+import 'package:quiz3/courses/pages/flutter/interaksi_pengguna.dart';
+import 'package:quiz3/courses/pages/flutter/navigasi_dan_routing_flutter.dart';
+import 'package:quiz3/courses/pages/flutter/pengenalan_flutter.dart';
+import 'package:quiz3/courses/pages/flutter/persiapan_pengembangan_flutter.dart';
 
 class ReactJS extends StatelessWidget {
   const ReactJS({super.key});
@@ -8,84 +13,363 @@ class ReactJS extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Column(
-        children: [
-          Container(
-            height: 200,
-            color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset("assets/icon/react-js-text.png"),
+          child: Column(children: [
+        Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Image.asset(
+              "assets/icon/react-js-text.png",
+              scale: 2,
             ),
           ),
-          Container(
-            height: 579,
-            decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.6),
-                borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(50),
-                    topRight: Radius.circular(50))),
-            child: ListView(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.only(left: 20.0, top: 20),
-                  child: Text("React JS",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 30)),
-                ),
-                Text("Bahasa Pemrograman Web",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontFamily: "Inter", fontSize: 20)),
-                SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 20.0, top: 10, right: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                          "React JS adalah sebuah pustaka JavaScript yang digunakan untuk membangun antarmuka pengguna (UI) interaktif dan dinamis. Dikembangkan oleh Facebook, React JS memungkinkan pengembang untuk membuat komponen UI yang dapat diperbarui secara efisien saat terjadi perubahan data, tanpa perlu memuat ulang seluruh halaman. Dalam paradigma pemrograman yang dikenal sebagai 'reactive programming', React JS menggunakan konsep Virtual DOM (Document Object Model) yang efisien untuk mengelola dan memperbarui elemen UI.",
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(fontFamily: "Inter", fontSize: 15)),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                          "Salah satu fitur utama React JS adalah pemisahan tegas antara tampilan (view) dan logika (logic). Dengan menggunakan komponen yang dapat digunakan kembali, pengembang dapat memecah UI menjadi bagian-bagian yang terisolasi, memudahkan pengembangan, pemeliharaan, dan pengujian. React JS menggunakan sintaks JavaScript yang deklaratif, yang memungkinkan pengembang untuk menyusun komponen UI dengan jelas dan mudah dibaca. Selain itu, React JS juga mendukung konsep unidirectional data flow, di mana perubahan pada data menghasilkan pembaruan pada tampilan secara otomatis.",
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(fontFamily: "Inter", fontSize: 15)),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                          "React JS juga didukung oleh ekosistem yang luas, termasuk berbagai pustaka dan alat pengembangan. Redux, misalnya, adalah pustaka yang sering digunakan bersama dengan React JS untuk mengelola keadaan (state) aplikasi secara efisien. React Router digunakan untuk mengatur rute dan navigasi dalam aplikasi web berbasis React. Selain itu, React JS juga dapat digunakan dalam pengembangan aplikasi mobile dengan bantuan React Native, sebuah framework yang memungkinkan pengembangan aplikasi native menggunakan JavaScript.",
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(fontFamily: "Inter", fontSize: 15)),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                          "React JS telah mendapatkan popularitas yang pesat dan banyak digunakan dalam industri pengembangan perangkat lunak. Keunggulannya yang meliputi performa tinggi, pengelolaan keadaan yang efisien, komponen yang dapat digunakan kembali, serta dukungan yang kuat dari komunitas pengembang telah membuat React JS menjadi salah satu pilihan utama dalam membangun antarmuka pengguna yang interaktif dan dinamis.",
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(fontFamily: "Inter", fontSize: 15)),
-                      SizedBox(
-                        height: 10,
-                      ),
-                    ],
+        ),
+        Container(
+          height: 655,
+          child: ListView(
+            padding: const EdgeInsets.all(20.0),
+            children: [
+              // Pengenalan Flutter
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PengenalanFlutter()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Pengenalan Flutter",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
                   ),
                 ),
-              ],
-            ),
-          )
-        ],
-      )),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              // Persiapan Pengembangan Flutter
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const PersiapanPengembanganFlutter()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Persiapan Pengembangan Flutter",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              // Dasar Dasar Flutter
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DasarDasarFlutter()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Dasar - Dasar Flutter",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              // Navigasi dan Routing di Flutter
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const NavigasidanRoutingFalutter()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Navigasi dan Routing di Flutter",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              // Interaksi Pengguna
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const InteraksiPengguna()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Interaksi Pengguna",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              // Animasi dan Efek Visual
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AnimasidanEfekVisual()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Animasi dan Efek Visual",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "COMMING SOON, \nSTAY TUNED",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+            ],
+          ),
+        ),
+      ])),
     );
   }
 }

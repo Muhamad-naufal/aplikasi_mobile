@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:quiz3/courses/pages/dart/dasar_dasar_dart.dart';
+import 'package:quiz3/courses/pages/dart/oop_object_oriented_programming.dart';
+import 'package:quiz3/courses/pages/dart/tipe_data_dan_variable.dart';
 
+import 'dart/fungsi_dan_pemrograman_prosedural.dart';
 import 'dart/pengenalan_dart.dart';
+import 'dart/sintaksis_dasar.dart';
 
 class Dart extends StatelessWidget {
   const Dart({super.key});
@@ -72,7 +76,7 @@ class Dart extends StatelessWidget {
                 height: 20,
               ),
 
-              // Persiapan Pengembangan Flutter
+              // Dasar Dasar Dart
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -120,6 +124,205 @@ class Dart extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
+
+              //Sintaksis Dasar
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SintaksisDasar()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Sintaksis Dasar",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              //Tipe Data
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TipeDatadanVariable()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Tipe Data dan Variable",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              //Fungsi dan Pemrograman Posedural
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const FungsidanPemrogramanProsedural()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Fungsi dan Pemrograman Prosedural",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              //OOP (Object-Oriented Programming
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const ObjectOrientedProgramming()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "OOP (Object-Oriented Programming)",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              //Stay Tuned
               GestureDetector(
                 onTap: () {},
                 child: Container(
