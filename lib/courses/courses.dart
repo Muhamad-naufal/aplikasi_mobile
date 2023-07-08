@@ -22,7 +22,10 @@ class _BaseScreenState extends State<BaseScreen> {
     return Scaffold(
       body: Stack(children: [
         Positioned(
-            width: MediaQuery.of(context).size.width * 1.7,
+            width: MediaQuery
+                .of(context)
+                .size
+                .width * 1.7,
             bottom: 100,
             left: 100,
             child: Image.asset("assets/Backgrounds/Spline.png")),
@@ -104,7 +107,7 @@ class _BaseScreenState extends State<BaseScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const Flutter()));
+                                            const Flutter()));
                                   },
                                   child: Container(
                                       height: 150,
@@ -112,10 +115,10 @@ class _BaseScreenState extends State<BaseScreen> {
                                       decoration: BoxDecoration(
                                           color: Colors.grey.withOpacity(0.7),
                                           borderRadius:
-                                              BorderRadius.circular(10)),
+                                          BorderRadius.circular(10)),
                                       child: Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.center,
+                                        CrossAxisAlignment.center,
                                         children: [
                                           const SizedBox(
                                             height: 10,
@@ -147,7 +150,7 @@ class _BaseScreenState extends State<BaseScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const Dart()));
+                                            const Dart()));
                                   },
                                   child: Container(
                                       height: 150,
@@ -155,10 +158,10 @@ class _BaseScreenState extends State<BaseScreen> {
                                       decoration: BoxDecoration(
                                           color: Colors.grey.withOpacity(0.7),
                                           borderRadius:
-                                              BorderRadius.circular(10)),
+                                          BorderRadius.circular(10)),
                                       child: Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.center,
+                                        CrossAxisAlignment.center,
                                         children: [
                                           const SizedBox(
                                             height: 5,
@@ -184,6 +187,7 @@ class _BaseScreenState extends State<BaseScreen> {
                             ),
                             Row(
                               children: [
+
                                 // React JS
                                 GestureDetector(
                                   onTap: () {
@@ -191,7 +195,7 @@ class _BaseScreenState extends State<BaseScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const ReactJS()));
+                                            const ReactJS()));
                                   },
                                   child: Container(
                                       height: 150,
@@ -199,10 +203,10 @@ class _BaseScreenState extends State<BaseScreen> {
                                       decoration: BoxDecoration(
                                           color: Colors.grey.withOpacity(0.7),
                                           borderRadius:
-                                              BorderRadius.circular(10)),
+                                          BorderRadius.circular(10)),
                                       child: Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.center,
+                                        CrossAxisAlignment.center,
                                         children: [
                                           const SizedBox(
                                             height: 10,
@@ -225,36 +229,6 @@ class _BaseScreenState extends State<BaseScreen> {
                                 ),
                                 const SizedBox(
                                   width: 40,
-                                ),
-                                GestureDetector(
-                                  onTap: () {},
-                                  child: Container(
-                                      height: 150,
-                                      width: 150,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey.withOpacity(0.7),
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          const SizedBox(
-                                            height: 5,
-                                          ),
-                                          Image.asset(
-                                            "assets/icon/java.png",
-                                            scale: 4.5,
-                                          ),
-                                          const SizedBox(
-                                            height: 5,
-                                          ),
-                                          const Text("Java",
-                                              style: TextStyle(
-                                                  fontFamily: "Poppins",
-                                                  fontSize: 15))
-                                        ],
-                                      )),
                                 ),
                               ],
                             ),
