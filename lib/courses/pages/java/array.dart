@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DasarDasarJava extends StatelessWidget {
-  const DasarDasarJava({Key? key}) : super(key: key);
+class Array extends StatelessWidget {
+  const Array({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class DasarDasarJava extends StatelessWidget {
             height: 100,
             child: const Center(
               child: Text(
-                "Dasar - Dasar Java",
+                "Array",
                 style: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 20,
@@ -34,7 +34,7 @@ class DasarDasarJava extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "A. Sintaks Dasar:",
+                      "A. Deklarasi, inisialisasi, dan penggunaan array.",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
@@ -44,16 +44,12 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Setiap program Java harus dimulai dengan method main(). "
-                        "Ini adalah titik masuk utama ke dalam program dan "
-                        "eksekusi dimulai dari sini.\n"
-                        "2. Program Java terdiri dari kelas-kelas. Setiap "
-                        "program minimal memiliki satu kelas yang berisi "
-                        "method main().\n"
-                        "3. Pernyataan diakhiri dengan titik koma (;).\n"
-                        "4. Komentar dapat digunakan untuk memberikan penjelasan "
-                        "dalam kode. Komentar dapat bersifat satu baris (//) "
-                        "atau multi-baris (/* ... */).\n",
+                        "Deklarasi array adalah langkah pertama dalam membuat "
+                        "array di dalam bahasa pemrograman. Array adalah "
+                        "struktur data yang terdiri dari kumpulan elemen "
+                        "dengan tipe data yang sama. Setiap elemen di "
+                        "dalam array diidentifikasi oleh indeksnya, yang "
+                        "dimulai dari 0.",
                         style: TextStyle(
                           fontFamily: "Intel",
                           fontSize: 15,
@@ -63,11 +59,22 @@ class DasarDasarJava extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "B. Tipe Data:",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Dalam deklarasi array, kita harus menyebutkan tipe"
+                        " data elemen dan memberikan nama untuk array "
+                        "tersebut. Misalnya, untuk mendeklarasikan array "
+                        "integer dengan nama 'angka', kita dapat menggunakan "
+                        "sintaks berikut:",
+                        style: TextStyle(
+                          fontFamily: "Intel",
+                          fontSize: 15,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -76,12 +83,85 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Tipe data primitif: Java memiliki tipe data primitif "
-                        "seperti int, double, boolean, char, dll., yang "
-                        "menyimpan nilai sebenarnya.\n"
-                        "2. Tipe data referensi: Java juga memiliki tipe "
-                        "data referensi seperti String, yang menyimpan "
-                        "referensi ke objek.\n",
+                        "int[] angka;",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Setelah deklarasi, array perlu diinisialisasi untuk "
+                        "menentukan ukuran dan mengalokasikan memori untuk "
+                        "elemen-elemennya. Inisialisasi dapat dilakukan secara "
+                        "langsung atau menggunakan kata kunci 'new' diikuti "
+                        "dengan tipe data dan ukuran array. Misalnya, kita "
+                        "dapat menginisialisasi array 'angka' dengan 5 elemen "
+                        "sebagai berikut:",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "angka = new int[5];",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Setelah deklarasi dan inisialisasi, kita dapat "
+                        "mengakses elemen-elemen dalam array menggunakan "
+                        "indeks. Indeks digunakan untuk mengidentifikasi "
+                        "posisi elemen dalam array, di mana indeks 0 menunjukkan "
+                        "elemen pertama. Contohnya, kita dapat mengakses dan "
+                        "memodifikasi elemen pertama dalam array 'angka' sebagai "
+                        "berikut:",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "angka[0] = 10; // Mengatur nilai elemen pertama menjadi 10\n"
+                        "int nilai = angka[0]; // Mengakses nilai elemen pertama dan menyimpannya dalam variabel 'nilai'",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Penggunaan array memungkinkan kita untuk menyimpan dan "
+                        "mengakses sejumlah elemen data dengan mudah, "
+                        "berdasarkan indeks. Dengan menggunakan perulangan, "
+                        "kita dapat mengiterasi melalui "
+                        "semua elemen dalam array dan melakukan operasi yang "
+                        "diperlukan.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -91,7 +171,7 @@ class DasarDasarJava extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "C. Variabel:",
+                      "B. Pemrosesan array dan pengulangan.",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
@@ -101,118 +181,7 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Variabel digunakan untuk menyimpan "
-                        "dan memanipulasi data.\n"
-                        "2. Sebelum menggunakan variabel, "
-                        "Anda harus mendeklarasikannya dengan "
-                        "menentukan tipe data dan memberikan nama variabel.\n"
-                        "Contoh:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "int age; // Deklarasi variabel\n"
-                        "age = 25; // Inisialisasi variabel\n"
-                        "double salary = 1000.0; // Deklarasi dan "
-                        "inisialisasi variabel sekaligus",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "D. Operator:",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. Operator aritmatika: seperti + (penjumlahan), - "
-                        "(pengurangan), * (perkalian), / (pembagian), % (modulus).\n"
-                        "2. Operator penugasan: seperti =, +=, -=, *=, /=, %=.\n"
-                        "3. Operator perbandingan: seperti == (sama dengan), != "
-                        "(tidak sama dengan), >, <, >=, <=.\n"
-                        "4. Operator logika: seperti && (dan), || (atau), ! (negasi).\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "E. Pengendali Aliran dan Pernyataan Kontrol:",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. Pernyataan kondisional if-else: Digunakan untuk menguji "
-                        "kondisi dan menjalankan blok kode tertentu jika kondisi "
-                        "terpenuhi.\n"
-                        "2. Pernyataan switch: Digunakan untuk mengevaluasi ekspresi "
-                        "dan menjalankan blok kode yang sesuai dengan nilai ekspresi.\n"
-                        "3. Pernyataan pengulangan for: Digunakan untuk melakukan "
-                        "perulangan sejumlah tertentu.\n"
-                        "4. Pernyataan pengulangan while: Digunakan untuk melakukan "
-                        "perulangan selama kondisi tertentu terpenuhi.\n"
-                        "5. Pernyataan pengulangan do-while: Digunakan untuk "
-                        "melakukan perulangan setidaknya satu kali, kemudian "
-                        "dilanjutkan selama kondisi tertentu terpenuhi.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "F. Pembuatan kelas, objek, dan metode dalam Java.",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Dalam Java, kelas, objek, dan metode adalah konsep utama "
-                        "dalam pemrograman berorientasi objek (OOP). "
-                        "Berikut adalah penjelasan tentang pembuatan kelas, "
-                        "objek, dan metode dalam Java:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. Kelas (Class):",
+                        "1. Pemrosesan Array:",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -223,14 +192,14 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Kelas adalah struktur dasar dalam Java yang digunakan "
-                        "untuk menggambarkan objek. Ia berfungsi sebagai cetak "
-                        "biru (blueprint) untuk membuat objek.\n"
-                        "2. Kelas berisi variabel (dikenal sebagai atribut) dan "
-                        "metode yang mendefinisikan perilaku objek.\n"
-                        "3. Kelas biasanya dideklarasikan dalam file terpisah "
-                        "dengan nama yang sama dengan nama kelas dan ekstensi "
-                        ".java.\n",
+                        "Pemrosesan array adalah proses mengakses dan "
+                        "memanipulasi elemen-elemen dalam sebuah array. "
+                        "Array adalah struktur data yang terdiri dari "
+                        "kumpulan elemen dengan tipe data yang sama. "
+                        "Pemrosesan array memungkinkan Anda untuk melakukan "
+                        "operasi seperti mengakses nilai elemen, mengubah nilai "
+                        "elemen, mencari nilai maksimum atau minimum, dan "
+                        "banyak lagi.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -241,7 +210,15 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "2. Objek (Object):",
+                        "Dalam pemrosesan array, Anda dapat menggunakan loop "
+                        "(pengulangan) untuk mengiterasi melalui setiap elemen "
+                        "dalam array. Terdapat beberapa jenis loop yang umum "
+                        "digunakan dalam pemrosesan array, seperti loop for, "
+                        "loop while, dan loop do-while. Dengan menggunakan loop, "
+                        "Anda dapat mengulangi serangkaian perintah untuk setiap "
+                        "elemen dalam array, sehingga memungkinkan Anda untuk "
+                        "melakukan operasi yang sama pada setiap elemen secara "
+                        "efisien.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -252,14 +229,7 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Objek adalah instansi dari suatu kelas. Ia dibuat "
-                        "berdasarkan cetak biru (blueprint) yang didefinisikan "
-                        "oleh kelas.\n"
-                        "2. Setiap objek memiliki keadaan yang unik (nilai variabel "
-                        "yang berbeda) dan dapat melakukan tindakan "
-                        "(memanggil metode).\n"
-                        "3. Untuk membuat objek, kita menggunakan operator new "
-                        "diikuti dengan pemanggilan konstruktor kelas.\n",
+                        "2. Pengulangan (Loop):",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -270,7 +240,12 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "3. Metode (Method):",
+                        "Pengulangan adalah konsep dasar dalam pemrograman yang "
+                        "memungkinkan eksekusi berulang dari serangkaian "
+                        "perintah. Dalam konteks pemrosesan array, pengulangan "
+                        "digunakan untuk mengiterasi melalui setiap elemen dalam "
+                        "array atau menjalankan serangkaian perintah sejumlah "
+                        "tertentu.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -299,10 +274,8 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Kita juga dapat membuat objek dari kelas MyClass dengan "
-                        "menggunakan operator new, seperti MyClass myObject = "
-                        "new MyClass();. Setelah itu, kita dapat memanggil metode "
-                        "pada objek tersebut, misalnya myObject.myMethod();.",
+                        "Terdapat beberapa jenis pengulangan yang umum digunakan, "
+                        "di antaranya:",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -313,11 +286,18 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Metode juga dapat menerima argumen dan mengembalikan nilai, "
-                        "seperti int addNumbers(int a, int b). Dalam contoh ini, "
-                        "metode addNumbers menerima dua argumen a dan b, dan "
-                        "mengembalikan hasil penjumlahan dari kedua argumen "
-                        "tersebut.",
+                        "1. Loop for: Digunakan untuk mengulangi serangkaian "
+                        "perintah sejumlah tertentu. Loop for menggunakan "
+                        "tiga bagian: inisialisasi variabel, kondisi "
+                        "perulangan, dan pernyataan iterasi.\n"
+                        "2. Loop while: Digunakan untuk mengulangi "
+                        "serangkaian perintah selama kondisi tertentu "
+                        "terpenuhi. Loop while akan terus dijalankan "
+                        "selama kondisi yang ditentukan bernilai true.\n"
+                        "3. Loop do-while: Sama seperti loop while, "
+                        "namun pernyataan dalam loop do-while akan "
+                        "dieksekusi setidaknya satu kali sebelum "
+                        "memeriksa kondisi perulangan.\n",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -328,94 +308,14 @@ class DasarDasarJava extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Dengan konsep kelas, objek, dan metode, kita dapat "
-                        "memodelkan dan mengorganisir kode dalam struktur "
-                        "yang terstruktur dan modular. Ini memungkinkan "
-                        "untuk membuat program yang lebih kompleks dengan "
-                        "menggabungkan objek-objek yang berinteraksi satu "
-                        "sama lain.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "G. Input dan output dasar menggunakan System.out dan Scanner.",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Input dan output (I/O) adalah aspek penting dalam "
-                        "pemrograman untuk berinteraksi dengan pengguna "
-                        "atau membaca/menulis data. Dalam Java, Anda dapat "
-                        "menggunakan System.out untuk output dan Scanner "
-                        "untuk input dasar. Berikut adalah penjelasan "
-                        "tentang penggunaan System.out dan Scanner:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. Output dengan System.out:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. System.out adalah objek yang terkait dengan output standar "
-                        "(layar).\n"
-                        "2. Anda dapat menggunakan metode System.out.println() "
-                        "untuk mencetak keluaran ke layar, diikuti dengan karakter "
-                        "baris baru (new line).\n"
-                        "3. Anda juga dapat menggunakan System.out.print() "
-                        "untuk mencetak keluaran tanpa karakter baris baru.\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "2. Input dengan Scanner:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. Scanner adalah kelas dalam paket java.util yang digunakan "
-                        "untuk membaca input dari pengguna atau sumber lain.\n"
-                        "2. Anda perlu membuat objek Scanner dengan menghubungkannya "
-                        "dengan sumber input, seperti System.in (input standar, yaitu "
-                        "keyboard) atau FileInputStream (untuk membaca dari file).\n"
-                        "3. Anda dapat menggunakan metode next(), nextInt(), "
-                        "nextDouble(), dll. pada objek Scanner untuk membaca input "
-                        "sesuai dengan tipe data yang diharapkan\n",
+                        "Dalam pemrosesan array, pengulangan memungkinkan "
+                        "Anda untuk mengakses setiap elemen dalam array "
+                        "dan melakukan operasi yang diperlukan, seperti "
+                        "mencari nilai tertentu, menghitung total, melakukan "
+                        "pemrosesan statistik, dan banyak lagi. Dengan "
+                        "menggunakan pengulangan, Anda dapat secara efisien "
+                        "memproses "
+                        "dan memanipulasi data dalam array sesuai kebutuhan Anda.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),

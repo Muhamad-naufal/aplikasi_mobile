@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import 'package:rive/rive.dart';
 
 class AnimatedBtn extends StatelessWidget {
@@ -34,11 +33,15 @@ class AnimatedBtn extends StatelessWidget {
               top: 8,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(CupertinoIcons.arrow_right),
+                children: [
+                  Image.asset(
+                    'assets/icon/kursor.png',
+                    height: 35,
+                    width: 35,
+                  ),
                   SizedBox(width: 8),
                   Text(
-                    "Start the course",
+                    "Tap To Start",
                     style: TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ],

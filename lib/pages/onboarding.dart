@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:quiz3/pages/auth_pages.dart';
 import 'package:rive/rive.dart';
@@ -57,7 +57,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: Column(
                     children: [
                       Text(
-                        "Learn and Update",
+                        "Code, Learn, Grow.",
                         style: TextStyle(
                             fontSize: 60, fontFamily: "Poppins", height: 1.2),
                       ),
@@ -65,7 +65,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         height: 16,
                       ),
                       Text(
-                          "Tulis semua pengalaman indah kamu di sini, atur keuangan kamu dengan baik, dan Jadilah orang yang update setiap hari diantara yang lain")
+                          "Belajar bahasa prmrograman, tanyakan dan diskusikan dengan seluruh pengguna,"
+                          "chat seseorang untuk bertanya dan berdiskusi ecara private")
                     ],
                   ),
                 ),
@@ -75,14 +76,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 AnimatedBtn(
                   press: () {
                     _btnAnimationController.isActive = true;
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const AuthPage())
-                    );
-                  }, btnAnimationColtroller: _btnAnimationController,
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AuthPage()));
+                  },
+                  btnAnimationColtroller: _btnAnimationController,
                 ),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 24.0),
                   child: Text(
-                      "Belajar di sekolah atau bangku kuliah itu penting, namun Healing juga penting"),
+                      "Kemampuan bahasa pemrograman adalah keterampilan berharga yang dapat membuka pintu menuju masa "
+                      "depan yang cerah. Berinvestasilah pada diri sendiri dan jadilah ahli dalam bidang ini."),
                 )
               ],
             ),

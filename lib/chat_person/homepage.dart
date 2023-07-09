@@ -2,26 +2,21 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'Logics/functions.dart';
 import 'chatpage.dart';
 import 'comps/styles.dart';
 import 'comps/widgets.dart';
 
 class HomePageChat extends StatefulWidget {
   const HomePageChat({Key? key}) : super(key: key);
+
   @override
   State<HomePageChat> createState() => _HomePageChatState();
 }
 
 class _HomePageChatState extends State<HomePageChat> {
-  @override
-  void initState() {
-    Functions.updateAvailability();
-    super.initState();
-  }
-
   final firestore = FirebaseFirestore.instance;
   bool open = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

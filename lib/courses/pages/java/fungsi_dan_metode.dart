@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Array extends StatelessWidget {
-  const Array({Key? key}) : super(key: key);
+class FungsidanMetode extends StatelessWidget {
+  const FungsidanMetode({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class Array extends StatelessWidget {
             height: 100,
             child: const Center(
               child: Text(
-                "Array",
+                "Fungsi dan Metode",
                 style: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 20,
@@ -34,7 +34,7 @@ class Array extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "A. Deklarasi, inisialisasi, dan penggunaan array.",
+                      "A. Definisi dan pemanggilan fungsi dalam Java.",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
@@ -44,12 +44,14 @@ class Array extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Deklarasi array adalah langkah pertama dalam membuat "
-                        "array di dalam bahasa pemrograman. Array adalah "
-                        "struktur data yang terdiri dari kumpulan elemen "
-                        "dengan tipe data yang sama. Setiap elemen di "
-                        "dalam array diidentifikasi oleh indeksnya, yang "
-                        "dimulai dari 0.",
+                        "Fungsi dalam Java adalah blok kode yang terorganisir dan "
+                        "dapat dipanggil untuk melakukan tugas tertentu. Fungsi "
+                        "memiliki nama, menerima argumen (input), dan "
+                        "mengembalikan nilai (output) setelah menjalankan "
+                        "instruksi yang ada di dalamnya. Fungsi digunakan "
+                        "untuk membagi kode program menjadi bagian-bagian "
+                        "yang lebih kecil dan terorganisir, sehingga memudahkan "
+                        "pengembangan, pemeliharaan, dan penggunaan kembali kode.",
                         style: TextStyle(
                           fontFamily: "Intel",
                           fontSize: 15,
@@ -64,11 +66,7 @@ class Array extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Dalam deklarasi array, kita harus menyebutkan tipe"
-                        " data elemen dan memberikan nama untuk array "
-                        "tersebut. Misalnya, untuk mendeklarasikan array "
-                        "integer dengan nama 'angka', kita dapat menggunakan "
-                        "sintaks berikut:",
+                        "Definisi fungsi dalam Java terdiri dari tiga bagian:",
                         style: TextStyle(
                           fontFamily: "Intel",
                           fontSize: 15,
@@ -83,7 +81,16 @@ class Array extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "int[] angka;",
+                        "1. Tipe pengembalian (return type): Menentukan jenis nilai yang "
+                        "dikembalikan oleh fungsi setelah selesai dijalankan. Tipe "
+                        "pengembalian dapat berupa tipe data primitif (seperti int, "
+                        "double, boolean) atau tipe data objek (seperti String, Array, "
+                        "Object).\n"
+                        "2. Nama fungsi: Menentukan identitas unik untuk fungsi yang "
+                        "akan digunakan dalam pemanggilan.\n"
+                        "3. Parameter (argumen): Opsional, digunakan untuk menerima "
+                        "input dari luar fungsi. Parameter terdiri dari tipe data dan "
+                        "nama, dan dapat berupa satu atau lebih.\n",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -95,13 +102,7 @@ class Array extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Setelah deklarasi, array perlu diinisialisasi untuk "
-                        "menentukan ukuran dan mengalokasikan memori untuk "
-                        "elemen-elemennya. Inisialisasi dapat dilakukan secara "
-                        "langsung atau menggunakan kata kunci 'new' diikuti "
-                        "dengan tipe data dan ukuran array. Misalnya, kita "
-                        "dapat menginisialisasi array 'angka' dengan 5 elemen "
-                        "sebagai berikut:",
+                        "Berikut adalah contoh definisi fungsi dalam Java:",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -113,7 +114,10 @@ class Array extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "angka = new int[5];",
+                        "public int tambah(int a, int b) {\n"
+                        "\t\tint hasil = a + b;\n"
+                        "\t\treturn hasil;\n"
+                        "};",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -125,43 +129,13 @@ class Array extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Setelah deklarasi dan inisialisasi, kita dapat "
-                        "mengakses elemen-elemen dalam array menggunakan "
-                        "indeks. Indeks digunakan untuk mengidentifikasi "
-                        "posisi elemen dalam array, di mana indeks 0 menunjukkan "
-                        "elemen pertama. Contohnya, kita dapat mengakses dan "
-                        "memodifikasi elemen pertama dalam array 'angka' sebagai "
-                        "berikut:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "angka[0] = 10; // Mengatur nilai elemen pertama menjadi 10\n"
-                        "int nilai = angka[0]; // Mengakses nilai elemen pertama dan menyimpannya dalam variabel 'nilai'",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Penggunaan array memungkinkan kita untuk menyimpan dan "
-                        "mengakses sejumlah elemen data dengan mudah, "
-                        "berdasarkan indeks. Dengan menggunakan perulangan, "
-                        "kita dapat mengiterasi melalui "
-                        "semua elemen dalam array dan melakukan operasi yang "
-                        "diperlukan.",
+                        "Dalam contoh di atas, fungsi 'tambah' memiliki tipe "
+                        "pengembalian 'int' yang berarti fungsi ini akan mengembalikan "
+                        "nilai bertipe integer. Fungsi menerima dua argumen berupa "
+                        "integer, yaitu 'a' dan 'b'. Di dalam fungsi, variabel "
+                        "'hasil' diinisialisasi dengan penjumlahan dari 'a' dan 'b', "
+                        "dan kemudian nilai 'hasil' dikembalikan menggunakan "
+                        "pernyataan 'return'.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -171,7 +145,7 @@ class Array extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "B. Pemrosesan array dan pengulangan.",
+                      "B. Parameter dan nilai kembalian fungsi.",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
@@ -181,146 +155,141 @@ class Array extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Pemrosesan Array:",
+                        "Dalam pemrograman, parameter dan nilai kembalian adalah "
+                        "dua konsep penting yang terkait dengan fungsi. Berikut "
+                        "adalah penjelasan singkat dan jelas tentang keduanya:",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
                     ),
                   ),
+                  SizedBox(height: 20),
                   Card(
                     elevation: 2,
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Pemrosesan array adalah proses mengakses dan "
-                        "memanipulasi elemen-elemen dalam sebuah array. "
-                        "Array adalah struktur data yang terdiri dari "
-                        "kumpulan elemen dengan tipe data yang sama. "
-                        "Pemrosesan array memungkinkan Anda untuk melakukan "
-                        "operasi seperti mengakses nilai elemen, mengubah nilai "
-                        "elemen, mencari nilai maksimum atau minimum, dan "
-                        "banyak lagi.",
+                        "1. Parameter: Parameter adalah nilai yang diberikan kepada "
+                        "sebuah fungsi saat dipanggil. Mereka berfungsi sebagai "
+                        "input untuk fungsi tersebut. Parameter memungkinkan kita "
+                        "untuk mengirimkan data atau informasi ke dalam fungsi agar "
+                        "dapat diproses atau digunakan di dalamnya. Sebagai contoh, "
+                        "dalam sebuah fungsi untuk menambahkan dua angka, kedua angka "
+                        "tersebut akan menjadi parameter fungsi tersebut.\n"
+                        "2. Nilai Kembalian: Nilai kembalian adalah hasil atau output "
+                        "yang dihasilkan oleh fungsi setelah diproses. Ketika "
+                        "sebuah fungsi dieksekusi, ia dapat mengembalikan nilai "
+                        "khusus yang dapat digunakan oleh bagian program lainnya. "
+                        "Nilai kembalian dapat berupa tipe data apapun, seperti "
+                        "angka, teks, boolean, atau bahkan objek kompleks. "
+                        "Sebagai contoh, dalam fungsi penjumlahan yang disebut "
+                        "sebelumnya, nilai kembalian akan berupa hasil "
+                        "penjumlahan kedua angka tersebut.\n",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
                     ),
                   ),
+                  SizedBox(height: 20),
                   Card(
                     elevation: 2,
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Dalam pemrosesan array, Anda dapat menggunakan loop "
-                        "(pengulangan) untuk mengiterasi melalui setiap elemen "
-                        "dalam array. Terdapat beberapa jenis loop yang umum "
-                        "digunakan dalam pemrosesan array, seperti loop for, "
-                        "loop while, dan loop do-while. Dengan menggunakan loop, "
-                        "Anda dapat mengulangi serangkaian perintah untuk setiap "
-                        "elemen dalam array, sehingga memungkinkan Anda untuk "
-                        "melakukan operasi yang sama pada setiap elemen secara "
-                        "efisien.",
+                        "Dengan menggunakan parameter dan nilai kembalian, kita dapat "
+                        "membuat fungsi yang lebih fleksibel dan dapat digunakan "
+                        "berulang kali dalam program. Parameter memungkinkan kita "
+                        "untuk memodifikasi perilaku fungsi dengan memberikan input "
+                        "yang berbeda, sedangkan nilai kembalian memungkinkan kita "
+                        "untuk memanfaatkan hasil yang dihasilkan oleh fungsi tersebut.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
                     ),
                   ),
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      "C. Overloading fungsi dan metode.",
+                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
+                    ),
+                  ),
+                  SizedBox(height: 20),
                   Card(
                     elevation: 2,
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "2. Pengulangan (Loop):",
+                        "Overloading adalah konsep dalam pemrograman di mana Anda "
+                        "dapat mendefinisikan beberapa fungsi atau metode dengan "
+                        "nama yang sama tetapi dengan parameter yang berbeda. "
+                        "Artinya, Anda dapat memiliki beberapa fungsi atau metode "
+                        "dengan nama yang sama tetapi dengan tipe, jumlah, atau "
+                        "urutan parameter yang berbeda.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
                     ),
                   ),
+                  SizedBox(height: 20),
                   Card(
                     elevation: 2,
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Pengulangan adalah konsep dasar dalam pemrograman yang "
-                        "memungkinkan eksekusi berulang dari serangkaian "
-                        "perintah. Dalam konteks pemrosesan array, pengulangan "
-                        "digunakan untuk mengiterasi melalui setiap elemen dalam "
-                        "array atau menjalankan serangkaian perintah sejumlah "
-                        "tertentu.",
+                        "Overloading memungkinkan Anda menggunakan nama yang sama untuk "
+                        "tugas yang berbeda, tergantung pada argumen yang diberikan "
+                        "saat memanggil fungsi atau metode. Dalam pemrograman "
+                        "berorientasi objek, overloading sering digunakan dalam "
+                        "kelas untuk memberikan beberapa cara yang berbeda untuk "
+                        "memanggil operasi yang sama.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
                     ),
                   ),
+                  SizedBox(height: 20),
                   Card(
                     elevation: 2,
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Metode adalah blok kode yang menggambarkan perilaku "
-                        "suatu objek. Ia digunakan untuk melakukan tindakan "
-                        "tertentu.\n"
-                        "2. Metode didefinisikan dalam kelas dan dapat "
-                        "dipanggil oleh objek yang dibuat dari kelas tersebut.\n"
-                        "3. Metode mungkin mengambil argumen (nilai yang "
-                        "diterima sebagai masukan) dan mengembalikan nilai "
-                        "sebagai hasil.\n",
+                        "Contoh sederhana dari overloading adalah fungsi penjumlahan. "
+                        "Anda dapat mendefinisikan fungsi 'add' dengan menerima "
+                        "dua bilangan bulat dan mengembalikan hasil penjumlahan "
+                        "mereka. Kemudian, Anda juga dapat mendefinisikan fungsi "
+                        "'add' dengan menerima dua bilangan desimal dan "
+                        "mengembalikan hasil penjumlahan mereka. Meskipun "
+                        "keduanya memiliki nama yang sama, perbedaan dalam "
+                        "tipe parameter memungkinkan pemanggilan yang tepat "
+                        "tergantung pada jenis argumen yang diberikan.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
                     ),
                   ),
+                  SizedBox(height: 20),
                   Card(
                     elevation: 2,
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Terdapat beberapa jenis pengulangan yang umum digunakan, "
-                        "di antaranya:",
+                        "Secara umum, ketika Anda menggunakan overloading, kompiler "
+                        "atau interpreter akan membedakan fungsi atau metode "
+                        "mana yang harus dipanggil berdasarkan tipe, jumlah, "
+                        "atau urutan parameter yang diberikan. Hal ini "
+                        "memungkinkan Anda untuk menulis kode yang lebih "
+                        "fleksibel dan mudah dibaca, karena Anda dapat "
+                        "menggunakan nama yang lebih deskriptif untuk berbagai "
+                        "operasi yang berkaitan, tanpa harus menciptakan nama "
+                        "yang berbeda untuk setiap kasusnya.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
                     ),
                   ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. Loop for: Digunakan untuk mengulangi serangkaian "
-                        "perintah sejumlah tertentu. Loop for menggunakan "
-                        "tiga bagian: inisialisasi variabel, kondisi "
-                        "perulangan, dan pernyataan iterasi.\n"
-                        "2. Loop while: Digunakan untuk mengulangi "
-                        "serangkaian perintah selama kondisi tertentu "
-                        "terpenuhi. Loop while akan terus dijalankan "
-                        "selama kondisi yang ditentukan bernilai true.\n"
-                        "3. Loop do-while: Sama seperti loop while, "
-                        "namun pernyataan dalam loop do-while akan "
-                        "dieksekusi setidaknya satu kali sebelum "
-                        "memeriksa kondisi perulangan.\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Dalam pemrosesan array, pengulangan memungkinkan "
-                        "Anda untuk mengakses setiap elemen dalam array "
-                        "dan melakukan operasi yang diperlukan, seperti "
-                        "mencari nilai tertentu, menghitung total, melakukan "
-                        "pemrosesan statistik, dan banyak lagi. Dengan "
-                        "menggunakan pengulangan, Anda dapat secara efisien "
-                        "memproses "
-                        "dan memanipulasi data dalam array sesuai kebutuhan Anda.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
+                  SizedBox(height: 20),
                 ],
               ),
             ),

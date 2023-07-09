@@ -13,7 +13,7 @@ class ModuldanPustaka extends StatelessWidget {
             height: 100,
             child: const Center(
               child: Text(
-                "Struktur Data",
+                "Modul dan Pustaka",
                 style: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 20,
@@ -34,7 +34,7 @@ class ModuldanPustaka extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "A. Daftar (List)",
+                      "A. Menggunakan modul bawaan Python",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
@@ -44,11 +44,10 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Daftar (List) pada Python adalah salah satu jenis struktur data "
-                        "yang digunakan untuk menyimpan kumpulan elemen dalam urutan "
-                        "tertentu. Daftar ini dapat berisi elemen-elemen dengan tipe "
-                        "data yang berbeda, seperti angka, string, atau bahkan daftar "
-                        "lain.",
+                        "Python memiliki banyak modul bawaan yang dapat digunakan untuk "
+                        "memperluas fungsionalitas dan mempermudah pengembangan "
+                        "aplikasi. Berikut adalah penjelasan singkat tentang beberapa "
+                        "modul bawaan Python yang umum digunakan:",
                         style: TextStyle(
                           fontFamily: "Intel",
                           fontSize: 15,
@@ -62,10 +61,36 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Anda dapat membuat daftar dengan menempatkan elemen-elemen yang "
-                        "ingin Anda simpan di dalam tanda kurung siku ([]), dipisahkan "
-                        "dengan koma. Sebagai contoh, berikut adalah cara membuat "
-                        "daftar yang berisi beberapa angka:",
+                        "1. math: Modul ini menyediakan fungsi matematika seperti "
+                        "operasi matematika dasar, fungsi trigonometri, "
+                        "eksponensial, logaritma, dan lain-lain.\n"
+                        "2. random: Modul ini digunakan untuk menghasilkan angka acak. "
+                        "Anda dapat menggunakan fungsi-fungsi seperti random(), "
+                        "randint(), dan choice() untuk menghasilkan angka atau "
+                        "elemen acak dari daftar.\n"
+                        "3. datetime: Modul ini digunakan untuk bekerja dengan tanggal "
+                        "dan waktu. Anda dapat membuat objek datetime, mengakses "
+                        "informasi seperti tahun, bulan, hari, dan melakukan "
+                        "operasi seperti penjumlahan atau pengurangan tanggal.\n"
+                        "4. os: Modul ini digunakan untuk berinteraksi dengan sistem "
+                        "operasi. Anda dapat menggunakan fungsi-fungsi seperti "
+                        "os.getcwd() untuk mendapatkan direktori kerja saat ini, "
+                        "os.listdir() untuk mendapatkan daftar file dalam direktori, "
+                        "atau os.path.join() untuk menggabungkan jalur file.\n"
+                        "5. re: Modul ini digunakan untuk bekerja dengan ekspresi "
+                        "reguler (regular expressions). Anda dapat menggunakan "
+                        "fungsi-fungsi seperti re.search() untuk mencocokkan pola "
+                        "dalam string, re.findall() untuk mencari semua kecocokan "
+                        "pola, dan lain-lain.\n"
+                        "6. json: Modul ini digunakan untuk bekerja dengan data dalam "
+                        "format JSON. Anda dapat menggunakan fungsi-fungsi seperti "
+                        "json.dumps() untuk mengubah objek Python menjadi string "
+                        "JSON, atau json.loads() untuk mengubah string JSON menjadi "
+                        "objek Python.\n"
+                        "7. csv: Modul ini digunakan untuk membaca dan menulis file CSV "
+                        "(Comma-Separated Values). Anda dapat menggunakan fungsi-"
+                        "fungsi seperti csv.reader() untuk membaca file CSV, atau "
+                        "csv.writer() untuk menulis data ke file CSV.\n",
                         style: TextStyle(
                           fontFamily: "Intel",
                           fontSize: 15,
@@ -79,7 +104,34 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "angka = [1, 2, 3, 4, 5]",
+                        "Itu hanya beberapa contoh modul bawaan Python. Ada banyak "
+                        "modul lainnya yang mencakup berbagai fungsi dan fitur. "
+                        "Anda dapat mengimpor modul yang diinginkan menggunakan "
+                        "pernyataan import dan mulai menggunakannya dalam program "
+                        "Python Anda.",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      "B. Membuat modul kustom",
+                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
+                    ),
+                  ),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Membuat modul kustom pada Python adalah proses membuat file "
+                        "Python yang berisi fungsi-fungsi, kelas-kelas, atau variabel-"
+                        "variabel yang dapat digunakan kembali dalam program Python "
+                        "lainnya. Modul ini memungkinkan kita untuk mengorganisir dan "
+                        "membagikan kode kita dalam unit-unit terpisah untuk mempermudah"
+                        " pengembangan dan pemeliharaan.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -90,22 +142,7 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Anda juga dapat mengakses elemen-elemen di dalam daftar dengan "
-                        "menggunakan indeks. Indeks dimulai dari 0 untuk elemen "
-                        "pertama, 1 untuk elemen kedua, dan seterusnya. Misalnya, "
-                        "untuk mengakses elemen pertama dari daftar 'angka' di atas, "
-                        "Anda dapat menggunakan kode berikut:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "print(angka[0])  # Output: 1",
+                        "Berikut adalah langkah-langkah umum untuk membuat modul kustom pada Python:",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -132,15 +169,16 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. append(elemen): Menambahkan elemen baru di akhir daftar.\n"
-                        "2. insert(indeks, elemen): Menyisipkan elemen pada posisi "
-                        "tertentu dalam daftar.\n"
-                        "3. remove(elemen): Menghapus elemen pertama dengan nilai "
-                        "tertentu dari daftar.\n"
-                        "4. extend(daftar): Menambahkan elemen-elemen dari daftar "
-                        "lain ke akhir daftar.\n"
-                        "5. sort(): Mengurutkan elemen dalam daftar secara "
-                        "berurutan.\n",
+                        "1. Buat file Python baru dengan ekstensi .py. Misalnya, "
+                        "'my_module.py'.\n"
+                        "2. Buka file tersebut dengan editor teks atau lingkungan "
+                        "pengembangan terintegrasi (IDE).\n"
+                        "3. Tentukan fungsi, kelas, atau variabel yang ingin Anda "
+                        "masukkan ke dalam modul.\n"
+                        "4. Tulis kode Python yang sesuai di dalam file tersebut. "
+                        "Pastikan setiap fungsi, kelas, atau variabel memiliki "
+                        "definisi yang jelas dan dipisahkan dengan baik.\n"
+                        "5. Simpan file Python tersebut.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -151,71 +189,9 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Berikut adalah contoh penggunaan beberapa metode tersebut",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "buah = ['apel', 'pisang', 'mangga']\n"
-                        "buah.append('jeruk')\n"
-                        "print(buah)  \n# Output: ['apel', 'pisang', "
-                        "'mangga', 'jeruk']\n"
-                        "buah.insert(1, 'nanas')"
-                        "print(buah)  \n# Output: ['apel', 'nanas', 'pisang', "
-                        "'mangga', 'jeruk']\n"
-                        "buah.remove('mangga')\n"
-                        "print(buah)  \n# Output: ['apel', 'nanas', 'pisang', 'jeruk']\n"
-                        "buah_lain = ['durian', 'anggur']\n"
-                        "buah.extend(buah_lain)\n"
-                        "print(buah)  \n# Output: ['apel', 'nanas', 'pisang', 'jeruk', "
-                        "'durian', 'anggur']\n"
-                        "buah.sort()\n"
-                        "print(buah)  \n# Output: ['anggur', 'apel', 'durian', 'jeruk', "
-                        "'nanas', 'pisang']\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Daftar pada Python sangat fleksibel dan dapat digunakan dalam "
-                        "berbagai skenario, seperti penyimpanan data, pengolahan data, "
-                        "atau pemrograman berorientasi objek.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "B. Tuple ",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Dalam Python, Tuple adalah struktur data yang digunakan untuk "
-                        "menyimpan kumpulan elemen. Tuple mirip dengan daftar "
-                        "(list), tetapi tidak dapat diubah setelah dibuat. Tuple "
-                        "didefinisikan dengan menggunakan tanda kurung () dan "
-                        "elemen-elemennya dipisahkan oleh koma.",
+                        "Setelah modul kustom dibuat, Anda dapat menggunakannya dalam "
+                        "program Python lainnya dengan mengimpornya. Berikut adalah "
+                        "contoh penggunaan modul kustom yang bernama 'my_module':",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -227,7 +203,22 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Berikut ini adalah beberapa karakteristik penting tentang Tuple:",
+                        "1. Buat file Python baru, misalnya 'main.py'."
+                        "2. Di dalam file tersebut, tambahkan baris kode berikut",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "import my_module\n"
+                        "# Gunakan fungsi atau kelas dari modul kustom\n"
+                        "my_module.my_function()\n"
+                        "my_object = my_module.MyClass()\n",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -239,38 +230,9 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Tidak dapat diubah (immutable): Setelah Tuple dibuat, "
-                        "elemen-elemennya tidak dapat diubah. Ini berarti Anda "
-                        "tidak dapat menambahkan, menghapus, atau mengubah nilai "
-                        "elemen dalam Tuple. Namun, jika elemen-elemen tersebut "
-                        "adalah objek yang dapat diubah (misalnya daftar), Anda dapat "
-                        "mengubah objek-objek tersebut di dalam Tuple.\n"
-                        "2. Urutan elemen: Elemen-elemen dalam Tuple diatur "
-                        "dalam urutan tertentu. Anda dapat mengakses elemen-elemen "
-                        "tersebut menggunakan indeks, seperti halnya pada daftar.\n"
-                        "3. Heterogen: Tuple dapat berisi elemen-elemen dengan tipe "
-                        "data yang berbeda. Misalnya, Anda dapat memiliki Tuple yang "
-                        "berisi angka, string, dan objek lainnya.\n"
-                        "4. Indeks negatif: Anda dapat menggunakan indeks negatif "
-                        "untuk mengakses elemen Tuple dari belakang. Indeks -1 merujuk "
-                        "pada elemen terakhir, -2 merujuk pada elemen kedua terakhir, "
-                        "dan seterusnya.\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Tuple sangat berguna ketika Anda ingin menyimpan beberapa "
-                        "nilai yang tidak akan berubah sepanjang program. Mereka "
-                        "sering digunakan dalam kasus seperti pengembalian nilai "
-                        "dari fungsi, pemetaan sederhana, dan pertukaran nilai "
-                        "antara variabel.",
+                        "Jalankan file 'main.py', dan kode akan mengimpor dan "
+                        "menggunakan fungsi dan kelas yang didefinisikan di "
+                        "dalam 'my_module'.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -280,7 +242,7 @@ class ModuldanPustaka extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "C. Set",
+                      "C. Menggunakan pustaka pihak ketiga",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
@@ -290,21 +252,12 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Pada Python, Set adalah salah satu tipe data koleksi yang "
-                        "digunakan untuk menyimpan sekumpulan elemen unik tanpa "
-                        "urutan tertentu. Set dapat berisi berbagai jenis objek, "
-                        "seperti angka, string, atau bahkan objek lain.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Beberapa karakteristik penting tentang Set di Python:",
+                        "Menggunakan pustaka pihak ketiga pada Python memungkinkan kita "
+                        "untuk mengimpor dan menggunakan kode yang telah dikembangkan "
+                        "oleh orang lain untuk menambahkan fungsionalitas tambahan ke "
+                        "dalam program kita. Berikut adalah langkah-langkah umum yang "
+                        "dapat diikuti untuk menggunakan pustaka pihak ketiga pada "
+                        "Python:",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -316,145 +269,23 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Unik: Set tidak mengizinkan adanya elemen duplikat. Jika "
-                        "Anda mencoba menambahkan elemen yang sudah ada dalam Set, "
-                        "elemen tersebut tidak akan ditambahkan.\n"
-                        "2. Tidak terurut: Elemen-elemen dalam Set tidak memiliki "
-                        "urutan tertentu. Ini berarti tidak ada indeks yang digunakan"
-                        " untuk mengakses elemen dalam Set.\n"
-                        "3. Mutable: Set adalah objek mutable, yang berarti Anda dapat "
-                        "menambahkan, menghapus, atau memperbarui elemen-elemen di "
-                        "dalamnya.\n"
-                        "4. Immutable elemen: Set tidak dapat berisi objek yang "
-                        "mutable, seperti list atau set itu sendiri. Namun, Set dapat "
-                        "berisi elemen-elemen yang immutable, seperti angka, string, "
-                        "atau tuple.\n"
-                        "5. Operasi matematika: Set mendukung operasi matematika "
-                        "seperti gabungan (union), irisan (intersection), dan "
-                        "perbedaan (difference), yang berguna dalam pemrosesan "
-                        "himpunan data.\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Set dalam Python sangat berguna ketika Anda perlu menyimpan "
-                        "koleksi elemen yang unik dan melakukan operasi seperti "
-                        "penggabungan, irisan, atau perbedaan antara dua Set.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "D.  Kamus (Dictionary)",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Kamus (atau Dictionary) adalah struktur data dalam Python yang "
-                        "digunakan untuk menyimpan pasangan kunci-nilai. Kunci dalam "
-                        "kamus harus unik dan tidak dapat diubah, sedangkan nilai "
-                        "dapat berupa tipe data apa pun. Kamus memungkinkan akses "
-                        "efisien ke nilai-nilai dengan menggunakan kunci sebagai "
-                        "referensi.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Anda dapat membuat kamus dengan menggunakan tanda kurung "
-                        "kurawal ({}) dan memasukkan pasangan kunci-nilai di "
-                        "dalamnya, dipisahkan dengan tanda titik dua (:). "
-                        "Contohnya seperti ini:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "kamus = {'kunci1': nilai1, 'kunci2': nilai2, 'kunci3': nilai3}",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Anda juga dapat menambahkan pasangan kunci-nilai baru ke kamus "
-                        "yang sudah ada atau mengubah nilai yang ada dengan "
-                        "menggunakan sintaks berikut:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "kamus[kunci] = nilai",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Untuk mengakses nilai dalam kamus, Anda cukup menggunakan "
-                        "kunci yang sesuai:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "nilai = kamus[kunci]",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Selain itu, Anda dapat menggunakan metode-metode kamus seperti "
-                        "keys() untuk mendapatkan daftar semua kunci, values() "
-                        "untuk mendapatkan daftar semua nilai, atau items() untuk "
-                        "mendapatkan daftar semua pasangan kunci-nilai dalam kamus.",
+                        "1. Instalasi: Pustaka pihak ketiga biasanya tersedia melalui "
+                        "Python Package Index (PyPI) dan dapat diinstal menggunakan "
+                        "manajer paket seperti pip. Perintah instalasi biasanya "
+                        "terlihat seperti ini: pip install nama_pustaka. Misalnya, "
+                        "jika Anda ingin menginstal pustaka numpy, perintahnya "
+                        "adalah pip install numpy.\n"
+                        "2. Impor pustaka: Setelah pustaka terinstal, Anda dapat "
+                        "mengimpor modul atau kelas yang ingin Anda gunakan di "
+                        "program Python Anda. Misalnya, jika Anda ingin menggunakan "
+                        "pustaka numpy, Anda dapat menambahkan pernyataan import "
+                        "numpy di awal program Anda.\n"
+                        "3. Gunakan fungsionalitas: Setelah pustaka diimpor, Anda "
+                        "dapat menggunakan fungsionalitas yang disediakan oleh "
+                        "pustaka tersebut. Misalnya, jika Anda menggunakan pustaka "
+                        "numpy, Anda dapat menggunakan fungsi-fungsi seperti "
+                        "numpy.array() untuk membuat array atau numpy.random.randint() "
+                        "untuk menghasilkan bilangan acak.\n",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -466,12 +297,10 @@ class ModuldanPustaka extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Kamus sangat berguna ketika Anda perlu mengelompokkan data dalam "
-                        "struktur yang lebih kompleks dan memungkinkan pengindeksan "
-                        "yang lebih spesifik. Misalnya, Anda dapat menggunakan kamus "
-                        "untuk menyimpan data pelanggan dengan kunci sebagai ID "
-                        "pelanggan dan nilai-nilainya sebagai informasi pelanggan "
-                        "seperti nama, alamat, dan nomor telepon.",
+                        "Penting untuk membaca dokumentasi pustaka pihak ketiga yang Anda "
+                        "gunakan untuk memahami fungsi dan metode yang tersedia serta "
+                        "cara menggunakannya. Dokumentasi umumnya dapat ditemukan di "
+                        "situs web pustaka atau di PyPI..",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),

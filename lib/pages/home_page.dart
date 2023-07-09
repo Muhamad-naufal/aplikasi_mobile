@@ -4,12 +4,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz3/medsos/home_medsos.dart';
 import 'package:quiz3/pages/profile_page.dart';
+
 import '../chat_person/homepage.dart';
 import '../courses/courses.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
+
   final user = FirebaseAuth.instance.currentUser!;
+
   @override
   State<HomePage> createState() => _HomePageState();
 }

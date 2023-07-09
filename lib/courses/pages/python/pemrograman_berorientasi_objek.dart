@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StrukturData extends StatelessWidget {
-  const StrukturData({Key? key}) : super(key: key);
+class PemrogramanBerorientasiObjek extends StatelessWidget {
+  const PemrogramanBerorientasiObjek({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class StrukturData extends StatelessWidget {
             height: 100,
             child: const Center(
               child: Text(
-                "Struktur Data",
+                "Pemrograman Berorientasi Objek",
                 style: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 20,
@@ -34,7 +34,7 @@ class StrukturData extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "A. Daftar (List)",
+                      "A. Kelas dan objek",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
@@ -44,11 +44,14 @@ class StrukturData extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Daftar (List) pada Python adalah salah satu jenis struktur data "
-                        "yang digunakan untuk menyimpan kumpulan elemen dalam urutan "
-                        "tertentu. Daftar ini dapat berisi elemen-elemen dengan tipe "
-                        "data yang berbeda, seperti angka, string, atau bahkan daftar "
-                        "lain.",
+                        "Kelas adalah suatu cetak biru atau templat yang mendefinisikan "
+                        "karakteristik atau atribut serta perilaku atau metode yang "
+                        "akan dimiliki oleh objek. Dalam hal ini, kelas berfungsi "
+                        "sebagai wadah untuk menggambarkan objek yang akan dibuat. "
+                        "Misalnya, jika kita ingin membuat objek yang mewakili "
+                        "seorang siswa, kita dapat menggunakan kelas untuk "
+                        "mendefinisikan atribut seperti nama, umur, dan nilai, "
+                        "serta metode seperti menghitung rata-rata nilai.",
                         style: TextStyle(
                           fontFamily: "Intel",
                           fontSize: 15,
@@ -62,10 +65,15 @@ class StrukturData extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Anda dapat membuat daftar dengan menempatkan elemen-elemen yang "
-                        "ingin Anda simpan di dalam tanda kurung siku ([]), dipisahkan "
-                        "dengan koma. Sebagai contoh, berikut adalah cara membuat "
-                        "daftar yang berisi beberapa angka:",
+                        "Objek adalah instansi yang diciptakan berdasarkan kelas. "
+                        "Ketika kita membuat objek, kita mengalokasikan memori "
+                        "untuk menyimpan atribut dan metode yang didefinisikan "
+                        "dalam kelas. Kita dapat memanipulasi objek dengan "
+                        "menggunakan metode yang telah didefinisikan dalam kelas. "
+                        "Misalnya, jika kita memiliki objek siswa bernama 'John', "
+                        "kita dapat mengakses atribut seperti nama dan umur, serta "
+                        "menggunakan metode seperti menghitung rata-rata nilai untuk "
+                        "objek tersebut.",
                         style: TextStyle(
                           fontFamily: "Intel",
                           fontSize: 15,
@@ -74,134 +82,134 @@ class StrukturData extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "angka = [1, 2, 3, 4, 5]",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Anda juga dapat mengakses elemen-elemen di dalam daftar dengan "
-                        "menggunakan indeks. Indeks dimulai dari 0 untuk elemen "
-                        "pertama, 1 untuk elemen kedua, dan seterusnya. Misalnya, "
-                        "untuk mengakses elemen pertama dari daftar 'angka' di atas, "
-                        "Anda dapat menggunakan kode berikut:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "print(angka[0])  # Output: 1",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Selain itu, Anda dapat melakukan berbagai operasi pada "
-                        "daftar, seperti menambahkan elemen baru, menghapus "
-                        "elemen, menggabungkan daftar, atau mengurutkan elemen. "
-                        "Beberapa metode umum yang digunakan pada daftar antara "
-                        "lain:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. append(elemen): Menambahkan elemen baru di akhir daftar.\n"
-                        "2. insert(indeks, elemen): Menyisipkan elemen pada posisi "
-                        "tertentu dalam daftar.\n"
-                        "3. remove(elemen): Menghapus elemen pertama dengan nilai "
-                        "tertentu dari daftar.\n"
-                        "4. extend(daftar): Menambahkan elemen-elemen dari daftar "
-                        "lain ke akhir daftar.\n"
-                        "5. sort(): Mengurutkan elemen dalam daftar secara "
-                        "berurutan.\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Berikut adalah contoh penggunaan beberapa metode tersebut",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "buah = ['apel', 'pisang', 'mangga']\n"
-                        "buah.append('jeruk')\n"
-                        "print(buah)  \n# Output: ['apel', 'pisang', "
-                        "'mangga', 'jeruk']\n"
-                        "buah.insert(1, 'nanas')"
-                        "print(buah)  \n# Output: ['apel', 'nanas', 'pisang', "
-                        "'mangga', 'jeruk']\n"
-                        "buah.remove('mangga')\n"
-                        "print(buah)  \n# Output: ['apel', 'nanas', 'pisang', 'jeruk']\n"
-                        "buah_lain = ['durian', 'anggur']\n"
-                        "buah.extend(buah_lain)\n"
-                        "print(buah)  \n# Output: ['apel', 'nanas', 'pisang', 'jeruk', "
-                        "'durian', 'anggur']\n"
-                        "buah.sort()\n"
-                        "print(buah)  \n# Output: ['anggur', 'apel', 'durian', 'jeruk', "
-                        "'nanas', 'pisang']\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Daftar pada Python sangat fleksibel dan dapat digunakan dalam "
-                        "berbagai skenario, seperti penyimpanan data, pengolahan data, "
-                        "atau pemrograman berorientasi objek.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "B. Tuple ",
+                      "B. Pewarisan dan polimorfisme",
+                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
+                    ),
+                  ),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Pewarisan dan polimorfisme adalah dua konsep penting dalam "
+                        "pemrograman berorientasi objek, termasuk dalam bahasa "
+                        "pemrograman Python.",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Pewarisan (inheritance) adalah mekanisme di mana sebuah kelas "
+                        "dapat mewarisi atribut dan metode dari kelas lain yang "
+                        "disebut kelas induk atau superclass. Kelas yang mewarisi "
+                        "atribut dan metode disebut kelas anak atau subclass. Dengan "
+                        "pewarisan, kelas anak dapat menggunakan kembali kode yang "
+                        "sudah ada dalam kelas induk, sehingga memungkinkan untuk "
+                        "membuat hierarki kelas yang lebih terorganisir dan "
+                        "mempermudah pengelolaan kode. Dalam Python, pewarisan "
+                        "diimplementasikan dengan menyebutkan kelas induk dalam "
+                        "definisi kelas anak, seperti contoh berikut:",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "class KelasInduk:\n"
+                        "\t\tdef metode_induk(self):\n"
+                        "\t\t\t\tprint('Ini adalah metode dari kelas induk.')\n"
+                        "class KelasAnak(KelasInduk):\n"
+                        "\t\tdef metode_anak(self):\n"
+                        "\t\t\t\tprint('Ini adalah metode dari kelas anak.')\n"
+                        "objek = KelasAnak()\n"
+                        "objek.metode_induk()  # Memanggil metode dari kelas induk\n"
+                        "objek.metode_anak()  # Memanggil metode dari kelas anak\n",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Polimorfisme adalah kemampuan objek untuk merespons dengan cara "
+                        "yang berbeda terhadap pemanggilan metode yang sama. Dalam "
+                        "konteks pewarisan, polimorfisme memungkinkan objek dari kelas "
+                        "anak untuk menggantikan metode yang diwarisi dari kelas induk "
+                        "dengan implementasi sendiri. Ini berarti bahwa objek dari "
+                        "kelas anak dapat memiliki perilaku yang berbeda, tetapi "
+                        "masih dapat diakses melalui antarmuka yang seragam. "
+                        "Polimorfisme dapat menciptakan kode yang lebih fleksibel "
+                        "dan dapat digunakan kembali. Berikut adalah contoh sederhana "
+                        "tentang polimorfisme dalam Python:",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "class Bentuk:\n"
+                        "\t\tdef hitung_luas(self):\n"
+                        "\t\t\t\tpass\n"
+                        "class PersegiPanjang(Bentuk):\n"
+                        "\t\tdef __init__(self, panjang, lebar):\n"
+                        "\t\t\t\tself.panjang = panjang\n"
+                        "\t\t\t\tself.lebar = lebar\n"
+                        "\t\tdef hitung_luas(self):\n"
+                        "\t\t\t\treturn self.panjang * self.lebar\n"
+                        "class Lingkaran(Bentuk):\n"
+                        "\t\tdef __init__(self, jari_jari):\n"
+                        "\t\t\t\tself.jari_jari = jari_jari\n"
+                        "\t\tdef hitung_luas(self):\n"
+                        "\t\t\t\treturn 3.14 * (self.jari_jari ** 2)\n"
+                        "persegi_panjang = PersegiPanjang(5, 10)\n"
+                        "lingkaran = Lingkaran(7)\n"
+                        "print(persegi_panjang.hitung_luas())  \n# Output: 50\n"
+                        "print(lingkaran.hitung_luas())  \n# Output: 153.86\n",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Pada contoh di atas, kelas PersegiPanjang dan Lingkaran mewarisi "
+                        "metode hitung_luas() dari kelas Bentuk. Namun, kedua kelas "
+                        "anak ini menggantikan metode tersebut dengan implementasi "
+                        "sendiri yang sesuai dengan bentuk mereka. Ini menunjukkan "
+                        "polimorfisme di mana meskipun kedua objek dipanggil dengan "
+                        "metode yang sama, mereka memberikan hasil yang berbeda.",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      "C. Encapsulation dan Abstraksi",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
@@ -211,11 +219,20 @@ class StrukturData extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Dalam Python, Tuple adalah struktur data yang digunakan untuk "
-                        "menyimpan kumpulan elemen. Tuple mirip dengan daftar "
-                        "(list), tetapi tidak dapat diubah setelah dibuat. Tuple "
-                        "didefinisikan dengan menggunakan tanda kurung () dan "
-                        "elemen-elemennya dipisahkan oleh koma.",
+                        "Dalam bahasa pemrograman Python, Encapsulation dan Abstraksi "
+                        "adalah dua konsep penting dalam paradigma pemrograman "
+                        "berorientasi objek.",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "1. Encapsulation:",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -227,7 +244,20 @@ class StrukturData extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Berikut ini adalah beberapa karakteristik penting tentang Tuple:",
+                        "Encapsulation adalah konsep yang melibatkan penggabungan data "
+                        "dan metode dalam sebuah objek, serta menyembunyikan "
+                        "implementasi detail dari objek tersebut. Hal ini dapat "
+                        "dicapai dengan menggunakan kelas dan metode-metode yang "
+                        "didefinisikan di dalamnya. Dalam Python, Anda dapat "
+                        "menggunakan konstruktor dan metode-metode kelas untuk "
+                        "mengontrol akses dan manipulasi data di dalam objek. "
+                        "Dengan cara ini, Anda dapat menerapkan logika bisnis "
+                        "atau aturan yang berkaitan dengan objek tersebut. "
+                        "Encapsulation membantu dalam mewujudkan konsep "
+                        "'black box' di mana pengguna objek tidak perlu tahu "
+                        "bagaimana objek bekerja di dalamnya, melainkan hanya "
+                        "perlu tahu bagaimana menggunakan fungsionalitas yang "
+                        "telah diungkapkan oleh objek tersebut.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -239,22 +269,7 @@ class StrukturData extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Tidak dapat diubah (immutable): Setelah Tuple dibuat, "
-                        "elemen-elemennya tidak dapat diubah. Ini berarti Anda "
-                        "tidak dapat menambahkan, menghapus, atau mengubah nilai "
-                        "elemen dalam Tuple. Namun, jika elemen-elemen tersebut "
-                        "adalah objek yang dapat diubah (misalnya daftar), Anda dapat "
-                        "mengubah objek-objek tersebut di dalam Tuple.\n"
-                        "2. Urutan elemen: Elemen-elemen dalam Tuple diatur "
-                        "dalam urutan tertentu. Anda dapat mengakses elemen-elemen "
-                        "tersebut menggunakan indeks, seperti halnya pada daftar.\n"
-                        "3. Heterogen: Tuple dapat berisi elemen-elemen dengan tipe "
-                        "data yang berbeda. Misalnya, Anda dapat memiliki Tuple yang "
-                        "berisi angka, string, dan objek lainnya.\n"
-                        "4. Indeks negatif: Anda dapat menggunakan indeks negatif "
-                        "untuk mengakses elemen Tuple dari belakang. Indeks -1 merujuk "
-                        "pada elemen terakhir, -2 merujuk pada elemen kedua terakhir, "
-                        "dan seterusnya.\n",
+                        "2. Abstraksi:",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -266,45 +281,20 @@ class StrukturData extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Tuple sangat berguna ketika Anda ingin menyimpan beberapa "
-                        "nilai yang tidak akan berubah sepanjang program. Mereka "
-                        "sering digunakan dalam kasus seperti pengembalian nilai "
-                        "dari fungsi, pemetaan sederhana, dan pertukaran nilai "
-                        "antara variabel.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "C. Set",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Pada Python, Set adalah salah satu tipe data koleksi yang "
-                        "digunakan untuk menyimpan sekumpulan elemen unik tanpa "
-                        "urutan tertentu. Set dapat berisi berbagai jenis objek, "
-                        "seperti angka, string, atau bahkan objek lain.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Beberapa karakteristik penting tentang Set di Python:",
+                        "Abstraksi adalah konsep di mana kita menyembunyikan detail yang "
+                        "tidak perlu atau kompleks dari suatu objek dan hanya "
+                        "mengekspos fungsionalitas yang penting. Dalam Python, "
+                        "abstraksi dapat dicapai dengan menggunakan kelas abstrak "
+                        "dan metode abstrak. Kelas abstrak adalah kelas yang tidak "
+                        "dapat diinstansiasi, tetapi dapat digunakan sebagai kerangka "
+                        "kerja untuk membuat kelas turunan yang mengimplementasikan "
+                        "metode abstrak yang didefinisikan dalam kelas abstrak "
+                        "tersebut. Metode abstrak adalah metode yang hanya memiliki "
+                        "definisi tanpa implementasi di dalam kelas abstrak, dan "
+                        "harus diimplementasikan oleh kelas turunan. Dengan "
+                        "menggunakan abstraksi, kita dapat memfokuskan perhatian pada "
+                        "fungsionalitas utama objek tanpa harus memikirkan detail "
+                        "implementasinya.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -316,162 +306,11 @@ class StrukturData extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Unik: Set tidak mengizinkan adanya elemen duplikat. Jika "
-                        "Anda mencoba menambahkan elemen yang sudah ada dalam Set, "
-                        "elemen tersebut tidak akan ditambahkan.\n"
-                        "2. Tidak terurut: Elemen-elemen dalam Set tidak memiliki "
-                        "urutan tertentu. Ini berarti tidak ada indeks yang digunakan"
-                        " untuk mengakses elemen dalam Set.\n"
-                        "3. Mutable: Set adalah objek mutable, yang berarti Anda dapat "
-                        "menambahkan, menghapus, atau memperbarui elemen-elemen di "
-                        "dalamnya.\n"
-                        "4. Immutable elemen: Set tidak dapat berisi objek yang "
-                        "mutable, seperti list atau set itu sendiri. Namun, Set dapat "
-                        "berisi elemen-elemen yang immutable, seperti angka, string, "
-                        "atau tuple.\n"
-                        "5. Operasi matematika: Set mendukung operasi matematika "
-                        "seperti gabungan (union), irisan (intersection), dan "
-                        "perbedaan (difference), yang berguna dalam pemrosesan "
-                        "himpunan data.\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Set dalam Python sangat berguna ketika Anda perlu menyimpan "
-                        "koleksi elemen yang unik dan melakukan operasi seperti "
-                        "penggabungan, irisan, atau perbedaan antara dua Set.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "D.  Kamus (Dictionary)",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Kamus (atau Dictionary) adalah struktur data dalam Python yang "
-                        "digunakan untuk menyimpan pasangan kunci-nilai. Kunci dalam "
-                        "kamus harus unik dan tidak dapat diubah, sedangkan nilai "
-                        "dapat berupa tipe data apa pun. Kamus memungkinkan akses "
-                        "efisien ke nilai-nilai dengan menggunakan kunci sebagai "
-                        "referensi.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Anda dapat membuat kamus dengan menggunakan tanda kurung "
-                        "kurawal ({}) dan memasukkan pasangan kunci-nilai di "
-                        "dalamnya, dipisahkan dengan tanda titik dua (:). "
-                        "Contohnya seperti ini:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "kamus = {'kunci1': nilai1, 'kunci2': nilai2, 'kunci3': nilai3}",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Anda juga dapat menambahkan pasangan kunci-nilai baru ke kamus "
-                        "yang sudah ada atau mengubah nilai yang ada dengan "
-                        "menggunakan sintaks berikut:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "kamus[kunci] = nilai",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Untuk mengakses nilai dalam kamus, Anda cukup menggunakan "
-                        "kunci yang sesuai:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "nilai = kamus[kunci]",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Selain itu, Anda dapat menggunakan metode-metode kamus seperti "
-                        "keys() untuk mendapatkan daftar semua kunci, values() "
-                        "untuk mendapatkan daftar semua nilai, atau items() untuk "
-                        "mendapatkan daftar semua pasangan kunci-nilai dalam kamus.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Kamus sangat berguna ketika Anda perlu mengelompokkan data dalam "
-                        "struktur yang lebih kompleks dan memungkinkan pengindeksan "
-                        "yang lebih spesifik. Misalnya, Anda dapat menggunakan kamus "
-                        "untuk menyimpan data pelanggan dengan kunci sebagai ID "
-                        "pelanggan dan nilai-nilainya sebagai informasi pelanggan "
-                        "seperti nama, alamat, dan nomor telepon.",
+                        "Dalam keseluruhan, encapsulation dan abstraction adalah konsep-"
+                        "konsep penting dalam pemrograman berorientasi objek yang "
+                        "membantu dalam mengorganisir kode, meningkatkan keamanan, "
+                        "dan memisahkan kekhawatiran yang berbeda-beda dalam suatu "
+                        "program.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),

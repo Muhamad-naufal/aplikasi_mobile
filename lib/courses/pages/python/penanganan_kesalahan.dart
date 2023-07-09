@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DasarDasarPython extends StatelessWidget {
-  const DasarDasarPython({Key? key}) : super(key: key);
+class PenangananKesalahan extends StatelessWidget {
+  const PenangananKesalahan({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class DasarDasarPython extends StatelessWidget {
             height: 100,
             child: const Center(
               child: Text(
-                "Dasar Dasar Pyhon",
+                "Penanganan Kesalahan",
                 style: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 20,
@@ -34,7 +34,7 @@ class DasarDasarPython extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "A. Variabel dan tipe data pada python",
+                      "A. Penanganan eksepsi (exception handling)",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
@@ -44,11 +44,13 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Variabel adalah tempat di memori komputer yang digunakan untuk "
-                        "menyimpan nilai atau data. Dalam Python, Anda dapat membuat "
-                        "variabel dengan menetapkan sebuah nilai kepadanya. Variabel "
-                        "bisa berisi berbagai jenis data, yang dikenal sebagai tipe "
-                        "data.",
+                        "Penanganan eksepsi, atau exception handling, adalah mekanisme "
+                        "di Python yang memungkinkan program untuk menangani situasi "
+                        "pengecualian atau kesalahan yang terjadi saat program "
+                        "dijalankan. Dengan menggunakan penanganan eksepsi, Anda "
+                        "dapat mengidentifikasi dan merespons kesalahan yang terjadi "
+                        "secara elegan, sehingga program dapat melanjutkan eksekusi "
+                        "atau mengambil tindakan yang sesuai.",
                         style: TextStyle(
                           fontFamily: "Intel",
                           fontSize: 15,
@@ -62,7 +64,7 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Berikut adalah beberapa tipe data dasar yang tersedia dalam Python:",
+                        "Berikut adalah langkah-langkah umum dalam penanganan eksepsi di Python:",
                         style: TextStyle(
                           fontFamily: "Intel",
                           fontSize: 15,
@@ -76,8 +78,11 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Integer: Tipe data ini digunakan untuk menyimpan bilangan "
-                        "bulat, misalnya 5 atau -10.",
+                        "1. Blok try-except: Anda dapat menempatkan potensi baris kode "
+                        "yang "
+                        "menyebabkan kesalahan dalam blok try. Jika kesalahan "
+                        "terjadi di dalam blok try, Python akan mencari blok except "
+                        "yang cocok untuk menangani kesalahan tersebut.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -88,7 +93,12 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "x = 5",
+                        "try:\n"
+                        "\t\t# Potensi baris kode yang dapat menimbulkan kesalahan\n"
+                        "\t\t# ...\n"
+                        "except JenisKesalahan:\n"
+                        "\t\t# Tindakan yang akan diambil jika kesalahan terjadi\n"
+                        "\t\t# ...\n",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -99,7 +109,12 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "2. Float: Tipe data ini digunakan untuk menyimpan bilangan desimal atau pecahan, misalnya 3.14 atau -0.5.",
+                        "2. Blok except: Blok ini akan menangani kesalahan yang sesuai "
+                        "dengan jenis kesalahan yang didefinisikan. Anda dapat "
+                        "menentukan jenis kesalahan yang ingin ditangani, seperti "
+                        "TypeError, ValueError, atau ZeroDivisionError. Jika "
+                        "kesalahan yang terjadi cocok dengan jenis yang ditentukan, "
+                        "blok except tersebut akan dieksekusi.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -111,7 +126,18 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "y = 3.14",
+                        "try:\n"
+                        "\t\t# Potensi baris kode yang dapat menimbulkan kesalahan\n"
+                        "\t\t# ...\n"
+                        "except ValueError:\n"
+                        "\t\t# Tindakan yang akan diambil jika ValueError terjadi\n"
+                        "\t\t# ...\n"
+                        "except ZeroDivisionError:\n"
+                        "\t\t# Tindakan yang akan diambil jika ZeroDivisionError terjadi\n"
+                        "\t\t# ...\n"
+                        "except:\n"
+                        "\t\t# Tindakan yang akan diambil jika jenis kesalahan tidak diketahui\n"
+                        "\t\t# ...",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -122,7 +148,10 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "3. String: Tipe data ini digunakan untuk menyimpan urutan karakter. String harus diapit dengan tanda kutip tunggal ('') atau tanda kutip ganda (",
+                        "3. Blok finally (opsional): Blok ini dapat digunakan untuk "
+                        "menentukan tindakan yang akan dilakukan tanpa peduli apakah "
+                        "kesalahan terjadi atau tidak. Blok finally akan dieksekusi "
+                        "setelah blok try atau except selesai.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -133,7 +162,16 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "nama = 'John Doe'",
+                        "try:\n"
+                        "\t\t# Potensi baris kode yang dapat menimbulkan kesalahan\n"
+                        "\t\t# ...\n"
+                        "except JenisKesalahan:\n"
+                        "\t\t# Tindakan yang akan diambil jika kesalahan terjadi\n"
+                        "\t\t# ...\n"
+                        "finally:\n"
+                        "\t\t# Tindakan yang akan dilakukan tanpa peduli apakah "
+                        "kesalahan terjadi atau tidak\n"
+                        "\t\t# ...",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -145,78 +183,32 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "4. Boolean: Tipe data ini hanya memiliki dua nilai yang "
-                        "mungkin, yaitu True (benar) atau False (salah). Tipe "
-                        "data ini digunakan dalam ekspresi logika.",
+                        "Dengan menggunakan penanganan eksepsi, Anda dapat mengendalikan "
+                        "alur program dan memberikan pesan atau tindakan yang sesuai "
+                        "ketika kesalahan terjadi, sehingga meningkatkan keandalan "
+                        "dan kegunaan program Python Anda.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
                     ),
                   ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "status = True",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Selain tipe data dasar tersebut, Python juga memiliki tipe "
-                        "data lain seperti list, tuple, set, dan dictionary yang "
-                        "memungkinkan Anda untuk menyimpan kumpulan nilai atau data "
-                        "dengan berbagai cara.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Pada Python, Anda tidak perlu secara eksplisit mendeklarasikan "
-                        "tipe data variabel. Python secara otomatis menentukan tipe "
-                        "data berdasarkan nilai yang Anda tetapkan ke variabel. "
-                        "Misalnya, jika Anda menginisialisasi sebuah variabel dengan "
-                        "angka bulat, Python akan menganggapnya sebagai tipe data "
-                        "integer. Namun, Anda dapat mengubah tipe data variabel dengan "
-                        "mengubah nilai yang disimpan di dalamnya.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      "B. Operator ",
+                      "B. Pernyataan try-except-finally",
                       style: TextStyle(fontFamily: "Poppins", fontSize: 18),
                     ),
                   ),
-                  SizedBox(height: 20),
                   Card(
                     elevation: 2,
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Operator dalam Python adalah simbol atau tanda khusus "
-                        "yang digunakan untuk melakukan operasi matematika atau "
-                        "manipulasi data pada nilai atau variabel. Python memiliki "
-                        "berbagai macam operator yang dapat digunakan untuk "
-                        "berbagai keperluan. Berikut adalah beberapa operator "
-                        "yang umum digunakan dalam Python:",
+                        "Pernyataan 'try-except-finally' adalah bagian dari mekanisme "
+                        "penanganan kesalahan (error handling) di Python. Dalam blok "
+                        "'try', Anda menempatkan kode yang mungkin menghasilkan "
+                        "kesalahan. Jika kesalahan terjadi, program akan melompat ke "
+                        "blok 'except' yang cocok dengan jenis kesalahan yang muncul.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -228,35 +220,7 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "1. Operator Aritmatika: Operator ini digunakan untuk melakukan "
-                        "operasi matematika dasar seperti penjumlahan (+), "
-                        "pengurangan (-), perkalian (*), pembagian (/), dan "
-                        "sebagainya.\n"
-                        "2. Operator Perbandingan: Operator ini digunakan untuk "
-                        "membandingkan dua nilai atau variabel. Beberapa contoh "
-                        "operator perbandingan adalah '==' (sama dengan), '!=' "
-                        "(tidak sama dengan), '>' (lebih besar dari), '<' (lebih "
-                        "kecil dari), dan sebagainya.\n"
-                        "3. Operator Logika: Operator ini digunakan untuk "
-                        "menggabungkan kondisi logika. Beberapa operator logika "
-                        "yang umum digunakan adalah 'and' (dan), 'or' (atau), dan "
-                        "'not' (negasi).\n"
-                        "4. Operator Penugasan: Operator ini digunakan untuk memberikan "
-                        "nilai pada variabel. Contoh operator penugasan adalah '=' "
-                        "(memberikan nilai), '+=' (menambahkan dan memperbarui nilai), "
-                        "'-=' (mengurangi dan memperbarui nilai), dan sebagainya.\n"
-                        "5. Operator Keanggotaan: Operator ini digunakan untuk memeriksa "
-                        "apakah suatu nilai atau variabel terdapat dalam sebuah urutan "
-                        "atau struktur data. Contoh operator keanggotaan adalah 'in' (ada "
-                        "dalam) dan 'not in' (tidak ada dalam).\n"
-                        "6. Operator Identitas: Operator ini digunakan untuk memeriksa "
-                        "apakah dua nilai atau variabel memiliki identitas yang sama. Contoh "
-                        "operator identitas adalah 'is' (sama dengan) dan 'is not' (tidak sama "
-                        "dengan).\n"
-                        "7. Operator Bitwise: Operator ini digunakan untuk "
-                        "melakukan operasi bit pada nilai atau variabel. Beberapa "
-                        "operator bitwise yang umum digunakan adalah '&' (AND bitwise), '|' "
-                        "(OR bitwise), '^' (XOR bitwise), dan sebagainya.\n",
+                        "Berikut adalah format umum dari pernyataan 'try-except-finally' di Python.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -268,29 +232,19 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Dengan menggunakan operator-operator ini, Anda dapat melakukan "
-                        "berbagai operasi dan manipulasi data yang diperlukan dalam "
-                        "program Python.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "B. Struktur kontrol (if-else, loop)",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. If-else:",
+                        "try:\n"
+                        "\t\t# Blok kode yang mungkin menghasilkan kesalahan\n"
+                        "\t\t...\n"
+                        "except ExceptionType1:\n"
+                        "\t\t# Blok penanganan kesalahan untuk ExceptionType1\n"
+                        "\t\t...\n"
+                        "except ExceptionType2:\n"
+                        "\t\t# Blok penanganan kesalahan untuk ExceptionType2\n"
+                        "\t\t...\n"
+                        "finally:\n"
+                        "\t\t# Blok yang akan dieksekusi selalu, baik terjadi "
+                        "kesalahan atau tidak\n"
+                        "\t\t...\n",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
@@ -302,137 +256,33 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Struktur kontrol if-else digunakan untuk mengambil keputusan "
-                        "berdasarkan kondisi tertentu. Blok kode dalam if-else akan "
-                        "dieksekusi jika kondisi yang diberikan bernilai benar "
-                        "(True), dan blok kode dalam else akan dieksekusi jika "
-                        "kondisi yang diberikan bernilai salah (False)."
-                        "Contoh penggunaan if-else dalam Python:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "x = 5\n"
-                        "if x > 0:\n"
-                        "\t\tprint('x adalah bilangan positif')\n"
-                        "else:\n"
-                        "\t\tprint('x adalah bilangan non-positif')\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "2. Loop:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Struktur kontrol loop digunakan untuk mengulang sekelompok "
-                        "pernyataan "
-                        "beberapa kali atau selama kondisi tertentu terpenuhi.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "a. Loop for:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Loop for digunakan untuk mengulang sejumlah elemen dalam "
-                        "urutan tertentu atau untuk sejumlah iterasi yang telah "
-                        "ditentukan sebelumnya."
-                        "Contoh penggunaan loop for dalam Python:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "fruits = ['apel', 'pisang', 'jeruk']\n"
-                        "for fruit in fruits:\n"
-                        "\t\tprint(fruit)",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "b. Loop while:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Loop while digunakan untuk mengulang sekelompok pernyataan selama kondisi yang diberikan bernilai benar (True)."
-                        "Contoh penggunaan loop while dalam Python:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "i = 0 "
-                        "while i < 5:"
-                        "\t\tprint(i)"
-                        "\t\ti += 1",
+                        "Jika tidak ada kesalahan yang terjadi di blok 'try', maka blok "
+                        "'except' akan diabaikan dan eksekusi program akan "
+                        "melanjutkan setelah blok 'try-except-finally'. Namun, "
+                        "jika kesalahan terjadi, blok yang cocok dengan jenis "
+                        "kesalahan akan dieksekusi, dan program kemudian "
+                        "melanjutkan eksekusi setelah blok 'try-except-finally'.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "C. Fungsi",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
+                  Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Blok 'finally' bersifat opsional, dan kode di dalamnya akan "
+                        "dieksekusi baik terjadi kesalahan maupun tidak. Pada "
+                        "umumnya, blok 'finally' digunakan untuk melakukan "
+                        "pembersihan (cleanup) atau penutupan (closing) yang "
+                        "penting, seperti menutup file atau sumber daya lainnya, "
+                        "yang harus dilakukan terlepas dari apakah terjadi kesalahan "
+                        "atau tidak di blok 'try'.",
+                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -441,183 +291,11 @@ class DasarDasarPython extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Fungsi dalam Python adalah blok kode yang dapat digunakan "
-                        "untuk melakukan tugas tertentu. Fungsi dapat menerima "
-                        "input,"
-                        "melakukan operasi pada input tersebut, dan mengembalikan output.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Berikut adalah beberapa poin penting tentang fungsi dalam Python:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "1. Deklarasi Fungsi: Fungsi dideklarasikan menggunakan kata "
-                        "kunci 'def' diikuti oleh nama fungsi dan tanda kurung (). "
-                        "Argumen fungsi dapat ditentukan di dalam tanda kurung "
-                        "tersebut.\n"
-                        "2. Argumen: Fungsi dapat menerima argumen sebagai input. Argumen "
-                        "ini adalah nilai-nilai yang diberikan saat memanggil "
-                        "fungsi. Argumen bisa bersifat opsional atau wajib.\n"
-                        "3. Pernyataan Return: Fungsi dapat mengembalikan nilai "
-                        "menggunakan pernyataan 'return'. Nilai yang "
-                        "dikembalikan ini bisa digunakan dalam bagian kode "
-                        "lainnya.\n"
-                        "4. Pemanggilan Fungsi: Fungsi dipanggil dengan menuliskan "
-                        "nama fungsi diikuti oleh tanda kurung (). Jika ada "
-                        "argumen yang diperlukan, argumen tersebut diberikan "
-                        "di dalam tanda kurung.\n"
-                        "5. Reusabilitas: Fungsi memungkinkan kode yang dapat "
-                        "digunakan kembali. Anda dapat memanggil fungsi "
-                        "berkali-kali dari berbagai bagian program.\n"
-                        "6. Pembagian Tugas: Fungsi memungkinkan pembagian tugas "
-                        "dalam program. Anda dapat memecah program menjadi "
-                        "fungsi-fungsi yang melakukan tugas-tugas tertentu, "
-                        "sehingga memudahkan pemeliharaan dan pengembangan kode.\n"
-                        "7. Scope Variabel: Variabel yang didefinisikan di dalam "
-                        "fungsi memiliki cakupan lokal, artinya variabel "
-                        "tersebut hanya dapat diakses di dalam fungsi. Namun, "
-                        "variabel global dapat diakses dari dalam fungsi jika "
-                        "didefinisikan di luar fungsi.\n"
-                        "8. Fungsi Rekursif: Python mendukung fungsi rekursif, "
-                        "yaitu fungsi yang memanggil dirinya sendiri.\n",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Fungsi merupakan salah satu konsep penting dalam pemrograman "
-                        "Python karena membantu dalam mengorganisasi dan "
-                        "mengelompokkan kode, memisahkan logika tertentu, dan "
-                        "meningkatkan keterbacaan dan keberlanjutan kode.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "C. Modul dan pustaka",
-                      style: TextStyle(fontFamily: "Poppins", fontSize: 18),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Dalam konteks Python, modul dan pustaka adalah dua "
-                        "konsep yang "
-                        "berhubungan dengan cara mengorganisir dan mengelola kode "
-                        "program.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "a. Modul:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Modul adalah file Python yang berisi definisi variabel, fungsi, "
-                        "dan kelas yang dapat digunakan dalam program Python lainnya. "
-                        "Modul membantu dalam mengorganisir dan memecah kode program "
-                        "menjadi bagian-bagian yang lebih kecil dan terpisah. Anda "
-                        "dapat mengimpor modul ke dalam program Python Anda "
-                        "menggunakan pernyataan import. Dengan menggunakan modul, "
-                        "Anda dapat mengakses dan menggunakan fungsionalitas yang "
-                        "didefinisikan di dalamnya, seperti fungsi dan kelas, untuk "
-                        "memperluas kemampuan program Anda. Python menyertakan banyak "
-                        "modul bawaan, seperti math untuk operasi matematika, random "
-                        "untuk menghasilkan angka acak, dan lain-lain. Selain itu, "
-                        "Anda juga dapat membuat modul Anda sendiri dengan membuat "
-                        "file Python yang berisi definisi kode Anda.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "a. Pustaka:",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Pustaka (atau library dalam bahasa Inggris) adalah kumpulan "
-                        "modul dan fungsi yang menyediakan fungsionalitas yang "
-                        "sudah dikembangkan sebelumnya dan dapat digunakan kembali. "
-                        "Pustaka sering digunakan untuk memperluas fungsionalitas "
-                        "Python dengan cara yang lebih spesifik. Python memiliki "
-                        "banyak pustaka pihak ketiga yang sangat populer dan kuat,"
-                        " seperti NumPy untuk komputasi numerik, Pandas untuk "
-                        "analisis data, Matplotlib untuk visualisasi data, dan "
-                        "TensorFlow untuk pembelajaran mesin. Pustaka-pustaka ini "
-                        "menyediakan berbagai alat dan fungsi yang sudah "
-                        "dikembangkan dan dioptimalkan untuk tugas-tugas "
-                        "khusus, sehingga memudahkan Anda dalam mengembangkan "
-                        "aplikasi atau melakukan analisis data dengan cepat dan "
-                        "efisien.",
-                        style: TextStyle(fontFamily: "Intel", fontSize: 15),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Secara singkat, modul adalah file Python yang "
-                        "berisi definisi kode dan dapat diimpor ke "
-                        "program lain, sedangkan pustaka adalah kumpulan "
-                        "modul dan fungsi yang menyediakan fungsionalitas "
-                        "yang sudah dikembangkan sebelumnya dan dapat "
-                        "digunakan kembali untuk memperluas kemampuan "
-                        "Python.",
+                        "Pernyataan 'try-except-finally' memungkinkan Anda untuk "
+                        "mengatasi kesalahan dengan cara yang terstruktur, sehingga "
+                        "memungkinkan penanganan kesalahan yang lebih baik dan "
+                        "menghindari program yang berhenti secara mendadak ketika "
+                        "terjadi kesalahan.",
                         style: TextStyle(fontFamily: "Intel", fontSize: 15),
                         textAlign: TextAlign.justify,
                       ),

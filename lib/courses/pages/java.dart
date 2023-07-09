@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:quiz3/courses/pages/react_js/javascript_xml.dart';
-import 'package:quiz3/courses/pages/react_js/komponen_react.dart';
-import 'package:quiz3/courses/pages/react_js/komunikasi_antar_kompenent.dart';
-import 'package:quiz3/courses/pages/react_js/pengelolaan_state.dart';
+import 'package:quiz3/courses/pages/java/dasar_dasar_java.dart';
+import 'package:quiz3/courses/pages/java/fungsi_dan_metode.dart';
+import 'package:quiz3/courses/pages/java/struktur_kontrol.dart';
 
-import 'react_js/routing.dart';
+import 'java/array.dart';
+import 'java/tipe_data_dan_variabel_java.dart';
 
-class ReactJS extends StatelessWidget {
-  const ReactJS({super.key});
+class Java extends StatelessWidget {
+  const Java({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,23 +19,23 @@ class ReactJS extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Image.asset(
-              "assets/icon/react-js-text.png",
+              "assets/icon/java_text.png",
               scale: 2,
             ),
           ),
         ),
         Container(
-          height: 655,
+          height: 570,
           child: ListView(
             padding: const EdgeInsets.all(20.0),
             children: [
-              // Komponen React
+              // Dasar - Dasar Java
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const KomponenReact()));
+                          builder: (context) => const DasarDasarJava()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -59,7 +59,7 @@ class ReactJS extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
                             child: Text(
-                              "Komponen React",
+                              "Dasar - Dasar Java",
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -78,159 +78,14 @@ class ReactJS extends StatelessWidget {
                 height: 20,
               ),
 
-              // Javacscript XML
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const JavascriptXML()));
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(
-                        10.0), // Menambahkan border radius ke container
-                  ),
-                  child: SizedBox(
-                    height: 60,
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 60,
-                          child: const Icon(Icons.book_sharp,
-                              size: 40), // Mengubah ukuran ikon menjadi 40
-                        ),
-                        const Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10.0),
-                            child: Text(
-                              "Javacscript XML",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const Icon(Icons.play_circle,
-                            size: 40), // Mengubah ukuran ikon menjadi 40
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-
-              // Pengelolaan State
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const PengelolaanState()));
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(
-                        10.0), // Menambahkan border radius ke container
-                  ),
-                  child: SizedBox(
-                    height: 60,
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 60,
-                          child: const Icon(Icons.book_sharp,
-                              size: 40), // Mengubah ukuran ikon menjadi 40
-                        ),
-                        const Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10.0),
-                            child: Text(
-                              "Pengelolaan State",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const Icon(Icons.play_circle,
-                            size: 40), // Mengubah ukuran ikon menjadi 40
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-
-              // Routing
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Routing()));
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(
-                        10.0), // Menambahkan border radius ke container
-                  ),
-                  child: SizedBox(
-                    height: 60,
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 60,
-                          child: const Icon(Icons.book_sharp,
-                              size: 40), // Mengubah ukuran ikon menjadi 40
-                        ),
-                        const Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10.0),
-                            child: Text(
-                              "Routing",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const Icon(Icons.play_circle,
-                            size: 40), // Mengubah ukuran ikon menjadi 40
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-
-              // Komunikasi Antar Komponen
+              // Tipe Data dan Variabel
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              const KomunikasiAntarKomponen()));
+                              const TipeDatadanVariabelJava()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -254,7 +109,7 @@ class ReactJS extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
                             child: Text(
-                              "Komunikasi Antar Komponen",
+                              "Tipe Data dan Variabel",
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -272,6 +127,152 @@ class ReactJS extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
+
+              // Struktur Kontrol
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const StrukturKontrol()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Struktur Kontrol",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              // Array
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Array()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Array",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              // Fungsi dan Metode
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FungsidanMetode()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Menambahkan border radius ke container
+                  ),
+                  child: SizedBox(
+                    height: 60,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 60,
+                          child: const Icon(Icons.book_sharp,
+                              size: 40), // Mengubah ukuran ikon menjadi 40
+                        ),
+                        const Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              "Fungsi dan Metode",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Icon(Icons.play_circle,
+                            size: 40), // Mengubah ukuran ikon menjadi 40
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
               //stay tuned
               GestureDetector(
                 onTap: () {},
