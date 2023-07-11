@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:quiz3/medsos/home_medsos.dart';
 import 'package:quiz3/pages/profile_page.dart';
 
-import '../chat_person/homepage.dart';
+import '../chat/screens/chat_screen.dart';
 import '../courses/courses.dart';
+import '../news/Pages/main_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -27,13 +28,15 @@ class _HomePageState extends State<HomePage> {
   Widget _getPage(int index) {
     switch (index) {
       case 0:
-        return BaseScreen();
+        return const BaseScreen();
       case 1:
-        return HomePageMedsos();
+        return const HomePageMedsos();
       case 2:
-        return const HomePageChat();
+        return const MainPage();
       case 3:
-        return ProfilePage();
+        return const ChatScreen();
+      case 4:
+        return const ProfilePage();
       default:
         return Container();
     }
@@ -46,7 +49,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.white,
         color: Colors.deepPurple.shade200,
-        animationDuration: Duration(milliseconds: 300),
+        animationDuration: const Duration(milliseconds: 300),
         onTap: (index) {
           setState(() {
             _currentPageIndex = index;
@@ -59,6 +62,10 @@ class _HomePageState extends State<HomePage> {
           ),
           Icon(
             CupertinoIcons.at,
+            color: Colors.white,
+          ),
+          Icon(
+            CupertinoIcons.news,
             color: Colors.white,
           ),
           Icon(

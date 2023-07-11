@@ -2,6 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz3/pages/onboarding.dart';
 import 'firebase_options.dart';
+import '../chat/providers/models_provider.dart';
+import 'package:provider/provider.dart';
+
+import '../chat/constants/constants.dart';
+import '../chat/providers/chats_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,9 +19,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => ModelsProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ChatProvider(),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'Flutter ChatBOT',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            scaffoldBackgroundColor: Colors.white,
+            appBarTheme: AppBarTheme(
+              color: cardColor,
+            )),
+        home: const OnboardingScreen(),
+      ),
     );
   }
 }

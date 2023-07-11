@@ -57,7 +57,9 @@ class _BaseScreenState extends State<BaseScreen> {
                                 const Text(
                                   "Welcome, ",
                                   style: TextStyle(
-                                      fontFamily: "Poppins", fontSize: 20),
+                                      fontFamily: "Poppins",
+                                      fontSize: 20,
+                                      color: Colors.white),
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -66,15 +68,15 @@ class _BaseScreenState extends State<BaseScreen> {
                                     Text(
                                       userData['username'],
                                       style: const TextStyle(
-                                          fontFamily: "Poppins", fontSize: 40),
+                                          fontFamily: "Poppins",
+                                          fontSize: 40,
+                                          color: Colors.white),
                                     ),
                                     const SizedBox(
                                       width: 10,
                                     ),
-                                    const Icon(
-                                      CupertinoIcons.person_alt_circle,
-                                      size: 50,
-                                    )
+                                    const Icon(CupertinoIcons.person_alt_circle,
+                                        size: 50, color: Colors.white)
                                   ],
                                 ),
                               ],
@@ -88,7 +90,10 @@ class _BaseScreenState extends State<BaseScreen> {
                         margin: const EdgeInsets.only(left: 10, top: 30),
                         child: const Text(
                           "Materi",
-                          style: TextStyle(fontFamily: "Poppins", fontSize: 20),
+                          style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 20,
+                              color: Colors.white),
                         ),
                       ),
 
